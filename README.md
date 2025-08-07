@@ -1,21 +1,19 @@
-# movie_recommender_system
-
-Movie Recommender System
-This project is a content-based movie recommender system built using Python. It takes a movie title as input and recommends similar movies based on the overview and other metadata using NLP and cosine similarity.
+#Movie Recommender System
+A simple content-based movie recommender built with Python. Enter a movie title, get a list of similar movies based on the plot summaries using NLP and cosine similarity.
 
 🚀 What It Does
-You enter the name of a movie, and the system gives you a list of similar movies you might enjoy. It does this by analyzing the descriptions (overviews) and computing similarity scores.
+You type in a movie name. It looks at the movie's overview, compares it to others, and recommends similar titles.
 
 🔧 How It Works
-Dataset: Pulled from TMDB with metadata like title, overview, genres, etc.
+Dataset: Comes from TMDB, includes title, overview, genre, etc.
 
-Data Cleaning: Missing values are handled. Only relevant columns are selected.
+Cleaning: Filters out missing data and irrelevant columns.
 
-Text Processing: Movie overviews are transformed into vectors using CountVectorizer.
+Text Vectorization: Uses CountVectorizer to convert overviews into vectors.
 
-Similarity: Cosine similarity is used to find and rank similar movies.
+Similarity: Uses cosine similarity to find and rank similar movies.
 
-Recommendation Logic: Top N similar movies are shown based on a selected movie.
+Recommendation: Returns top N closest matches to the input movie.
 
 🧰 Tech Stack
 Python 3
@@ -29,54 +27,57 @@ Scikit-learn
 Jupyter Notebook
 
 📂 Files
-movie_recommended_system.ipynb: Main notebook with the complete implementation.
+movie_recommended_system.ipynb — Main notebook with the full implementation
 
-tmdb_5000_movies.csv: Dataset with movie metadata (you'll need this to run it).
+tmdb_5000_movies.csv — Dataset (make sure it's in the same directory)
 
-README.md: You're reading it.
+README.md — This file
 
-✅ How To Run
-Clone the repo or download the notebook.
+✅ How to Run It
+Clone this repo or download the notebook
 
-Make sure the required libraries are installed:
+Install the required packages:
 
 bash
 Copy
 Edit
 pip install pandas scikit-learn
-Run the notebook:
-Open movie_recommended_system.ipynb in Jupyter Notebook or any compatible editor.
+Open movie_recommended_system.ipynb in Jupyter or any compatible editor
 
-Replace the movie title in the last cell with your favorite movie and run the cell to get recommendations.
-
-🧠 Example Output
-Input:
+Replace the movie name in the last cell with one of your choice:
 
 python
 Copy
 Edit
 recommend('Avatar')
-Output:
+Run the cell to get recommendations.
 
+🧠 Example Output
+python
+Copy
+Edit
+recommend('Avatar')
 markdown
 Copy
 Edit
-1. Aliens vs Predator: Requiem
-2. Battle: Los Angeles
-3. John Carter
-4. The Helix... Loaded
-5. Star Trek Into Darkness
+1. Aliens vs Predator: Requiem  
+2. Battle: Los Angeles  
+3. John Carter  
+4. The Helix... Loaded  
+5. Star Trek Into Darkness  
 📌 Limitations
-Only works with the movies present in the dataset.
+Only works for movies in the dataset
 
-Recommendations are based purely on content (text), not user behavior or ratings.
+No personalization — it doesn’t learn user preferences
+
+Relies on overview text only, not cast, ratings, or user data
 
 📈 Future Improvements
-Add collaborative filtering.
+Add collaborative filtering
 
-Integrate with a web interface using Streamlit or Flask.
+Build a web interface using Streamlit or Flask
 
-Improve NLP using TF-IDF or word embeddings.
+Use TF-IDF or advanced NLP techniques (e.g. BERT) for better vectorization
 
 🙌 Credits
-Dataset: TMDB
+Dataset: TMDB via Kaggle
