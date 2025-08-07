@@ -1,4 +1,7 @@
 #Movie Recommender System
+
+Movie Recommender System
+
 A simple content-based movie recommender built with Python. Enter a movie title, get a list of similar movies based on the plot summaries using NLP and cosine similarity.
 
 🚀 What It Does
